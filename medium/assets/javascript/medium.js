@@ -38,12 +38,58 @@
 
 (function(){
 
-  //jQuery equivelent to window.onload = function{}
-  //code in here wont run until page loads
+
+  //varibles delaired with jQuery
   $(function(){
+    var resetButton = $("#reset");
+    var shot1Button = $("#teamone-shoot");
+    var shot2Button = $("#teamtwo-shoot");
+    var resetCounter = $("#num-resets");
+    var team1Score = $("#teamone-numhits");
+    var team2Score = $("#teamtwo-numhits");
+    var team1Shots = $("#teamone-numshots");
+    var team2Shots = $("#teamtwo-numshots");
+    var shot1AudioPlay =   $("#shot1");
+    var shot2AudioPlay =   $("#shot2");
+
+//reset button created with jQuery
+    resetButton.click(function(){
+       resetCounter.html(parseInt(resetCounter.html()) + 1);
+       team1Score.html(0);
+       team2Score.html(0);
+       team1Shots.html(0);
+       team2Shots.html(0);
+    })
+
+//shot button team 1 jQuery
+    shot1Button.click(function(){
+
+    // shot1AudioPlay.play();
+      var ranScoreCheck = Math.random() < 0.5 ? true : false;
+       team1Shots.html(parseInt(team1Shots.html()) + 1);
+
+       if (ranScoreCheck == true){
+         team1Score.html(parseInt(team1Score.html()) + 1);
+         let ranScoreCheck =  Math.random() < 0.5 ? true : false
+       }
 
 
+    })
 
+//shot button team 2 jQuery
+    shot2Button.click(function(){
+
+    //shot2AudioPlay.play();
+      var ranScoreCheck = Math.random() < 0.5 ? true : false;
+       team2Shots.html(parseInt(team2Shots.html()) + 1);
+
+       if (ranScoreCheck == true){
+         team2Score.html(parseInt(team2Score.html()) + 1);
+         ranScoreCheck =  Math.random() < 0.5 ? true : false
+       }
+
+
+    })
   })
 
 })();

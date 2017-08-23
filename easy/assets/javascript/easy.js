@@ -26,6 +26,10 @@
     return $('#save-me').val();
   }
 
+  saveButton.click(function() {
+    localStorage.setItem("saved text", getText());
+    console.log(localStorage.getItem("saved text"))
+  })
   /**
    * Puts different text
    * @param {String} text the stuff you want to put in the box
@@ -33,4 +37,11 @@
   function setText(text) {
     return $('#save-me').val(text);
   }
+
+  loadButton.click(function() {
+    var load = localStorage.getItem("saved text");
+    $("#save-me").val(load);
+  })
+
+
 })();

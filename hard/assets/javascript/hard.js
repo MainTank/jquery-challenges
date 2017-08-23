@@ -31,12 +31,24 @@
 
  (function(){
 
-   //jQuery equivelent to window.onload = function{}
-   //code in here wont run until page loads
    $(function(){
 
+     //Problem 1
+     var titleColorChange = $("h1");
 
+     titleColorChange.click(function(){
+          if (titleColorChange.css({"color" : "black"})) {
+            titleColorChange.css({"color" : "red"});
+          }
+          else {
+            titleColorChange.css({"color" : "black"})
+          }
+     })
 
-   })
-
+   //Problem 3 and 5
+   $('p').each(function() {
+       var text = $(this).text();
+       $(this).text(text.replace('Bacon', 'LASER VISION'));
+   });
+  })
  })();
