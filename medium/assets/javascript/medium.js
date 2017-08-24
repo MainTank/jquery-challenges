@@ -59,6 +59,7 @@
        team2Score.html(0);
        team1Shots.html(0);
        team2Shots.html(0);
+          $("#main").css({"background-color" : "rgba(194, 173, 173, 0.5)"})
     })
 
 //shot button team 1 jQuery
@@ -70,6 +71,7 @@
 
        if (ranScoreCheck == true){
          team1Score.html(parseInt(team1Score.html()) + 1);
+         $("#main").css({"background-color" : "rgba(185, 54, 50, 0.5)"})
          let ranScoreCheck =  Math.random() < 0.5 ? true : false
        }
 
@@ -85,6 +87,7 @@
 
        if (ranScoreCheck == true){
          team2Score.html(parseInt(team2Score.html()) + 1);
+         $("#main").css({"background-color" : "rgba(233, 197, 61, 0.5)"})
          ranScoreCheck =  Math.random() < 0.5 ? true : false
        }
 

@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/styles.css">
   <title>JS Game Challenge</title>
-  <style type="text/css">
-    .hide {
-      display: none;
-    }
-    .left {
-      float: left;
-    }
-    .right {
-      float: right;
-    }
-    .clear {
-      clear: both;
-    }
-  </style>
 </head>
 <body>
-  <div style="width: 700px;margin: 0 auto;">
-    <h1 style="margin-bottom:5px">Hockey, JavaScript, and jQuery oh My!</h1>
-    <h2 style="margin-top: 0">...the game!</h2>
-    <div style="margin: 0 auto;text-align:center">
+  <div id="main">
+
+    <div id="header">
+    <h1>Cowboys VS Native Americans</h1>
       <button id="reset">RESET</button><br>
       NUMBER OF RESETS: <span id="num-resets">0</span>
     </div>
-    <div class="clear"></div>
-    <div class="left">
-      <h2>
-        Team 1
-      </h2>
-      <div class="hits">
-        SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
-        GOALS: <span id="teamone-numhits">0</span>
+
+    <div id="secondary">
+      <div class="cbna">
+        <h2>
+          Cowboys
+        </h2>
+        <img class="icon" src="assets/images/cbicon.png">
+        <div class="hits">
+          SHOTS FIRED: <span id="teamone-numshots">0</span><br>
+          HITS: <span id="teamone-numhits">0</span>
+          <audio id="shot1">
+            <source src="assets/audio/shot1.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div>
+          <button id="teamone-shoot">SHOOT</button>
+        </div>
       </div>
-      <div>
-        <button id="teamone-shoot">SHOOT</button>
+
+      <div class="cbna">
+        <h2>
+          Native Americans
+        </h2>
+        <img class="icon" src="assets/images/naicon.jpg">
+        <div class="hits">
+          SHOTS FIRED: <span id="teamtwo-numshots">0</span><br>
+          HITS: <span id="teamtwo-numhits">0</span>
+          <audio id="shot2">
+            <source src="assets/audio/shot2.wav" type="audio/wav">
+          </audio>
+        </div>
+        <div>
+          <button id="teamtwo-shoot">SHOOT</button>
+        </div>
       </div>
     </div>
-    <div class="right">
-      <h2>
-        Team 2
-      </h2>
-      <div class="hits">
-        SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
-        GOALS: <span id="teamtwo-numhits">0</span>
-      </div>
-      <div>
-        <button id="teamtwo-shoot">SHOOT</button>
-      </div>
-    </div>
-    <div class="clear"></div>
+
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <script src="assets/javascript/medium.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/medium.js"></script>
 </body>
 </html>

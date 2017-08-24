@@ -35,15 +35,26 @@
 
      //Problem 1
      var titleColorChange = $("h1");
+     var beenClicked = false
 
      titleColorChange.click(function(){
-          if (titleColorChange.css({"color" : "black"})) {
+          if (beenClicked == false) {
             titleColorChange.css({"color" : "red"});
+            beenClicked = true;
           }
           else {
             titleColorChange.css({"color" : "black"})
+            beenClicked = false
           }
      })
+
+     //Problem 2
+     let links = $(".section:even");
+     links.hide();
+
+     //problem 4
+      $('.post:last').remove()
+      $('.post:last').remove()
 
    //Problem 3 and 5
    $('p').each(function() {
